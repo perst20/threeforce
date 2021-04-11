@@ -2,6 +2,12 @@
 
 Find out if you can triforce
 
+# Screenshots 
+
+![Screenshot_20210411_221625](https://user-images.githubusercontent.com/59165467/114318032-b3e8e280-9b13-11eb-9d2b-8ada92dfa333.png)
+![Screenshot_20210411_221636](https://user-images.githubusercontent.com/59165467/114318035-bb0ff080-9b13-11eb-9fa2-47902ffc506a.png)
+
+
 # Dependencies
 
 - CMake >= 3.17
