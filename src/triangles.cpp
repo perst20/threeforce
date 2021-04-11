@@ -52,3 +52,8 @@ int triangles::get_triangle_index_by_point(const point &p) const {
     }
     return tr;
 }
+
+triangles::~triangles() {
+    glDeleteBuffers(1, &vbo_);
+    glDeleteVertexArrays(1, &vao_);
+}

@@ -31,6 +31,8 @@ public:
     void push_back(const triangle & tr);
 
     int get_triangle_index_by_point(const point & p) const;
+
+    ~triangles();
 };
 
 
