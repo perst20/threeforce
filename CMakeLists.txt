@@ -26,3 +26,19 @@ target_link_libraries(threeforce PRIVATE
         OpenGL::GLX
         GLEW::GLEW
         )
+
+#add_custom_command(
+#        TARGET threeforce POST_BUILD
+#        COMMAND ${CMAKE_COMMAND} -E copy
+#        ${CMAKE_SOURCE_DIR}/res/*
+#        ${CMAKE_CURRENT_BINARY_DIR})
+
+ADD_CUSTOM_TARGET(
+        copy_shader_files
+        ${CMAKE_COMMAND} -E copy_directory
+                ${CMAKE_SOURCE_DIR}/res
+                ${CMAKE_CURRENT_BINARY_DIR}
+        VERBATIM
+)
+
+ADD_DEPENDENCIES (threeforce copy_shader_files)
