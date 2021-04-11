@@ -37,6 +37,8 @@ struct color {
     GLfloat g;
     GLfloat b;
     GLfloat a;
+    color(std::uint32_t hex, GLfloat alpha);
+    color(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 };
 
 point get_normalized_point(int x, int y, int width, int height);

@@ -45,3 +45,11 @@ point get_normalized_point(int x, int y, int width, int height) {
             -(((GLfloat) y * 2 / (GLfloat) height) - 1)
     };
 }
+
+color::color(std::uint32_t hex, GLfloat alpha) : a(alpha){
+    b = (GLfloat) (hex & 0xff) / (GLfloat) 0xff;
+    g = (GLfloat) ((hex >> 8)  & 0xff) / (GLfloat) 0xff;
+    r = (GLfloat) ((hex >> 16)  & 0xff) / (GLfloat) 0xff;
+}
+
+color::color(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) : r(red), g(green), b(blue), a(alpha){}

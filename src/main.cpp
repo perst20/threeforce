@@ -9,8 +9,7 @@
 
 
 const size_t MAX_TRIANGLES = 1024;
-const color DEFAULT_COLOR = {0.444f, 0.0f, 0.7f, 0.0f};
-const color CLICK_COLOR = {0.7f, 1.0f, 0.7f, 0.0f};
+const color DEFAULT_COLOR{0x25854b, 1};
 
 Display *display;
 GLXContext glxContext;
@@ -117,7 +116,7 @@ int main() {
                                       norm_pos + point{0.05f, -0.1f}
                 });
             }
-            set_background_color(CLICK_COLOR);
+//            set_background_color(CLICK_COLOR);
             prev_cursor_pos = norm_pos;
             is_button_pressed = true;
         } else if (is_button_pressed) {
@@ -133,7 +132,7 @@ int main() {
         }
         if (XCheckTypedEvent(display, ButtonRelease, &event)) {
             is_button_pressed = false;
-            set_background_color(DEFAULT_COLOR);
+//            set_background_color(DEFAULT_COLOR);
         }
         glClear(GL_COLOR_BUFFER_BIT);
         trs.draw();
