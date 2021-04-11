@@ -1,6 +1,6 @@
 # triforce
 
-Find out if you can triforce
+Find out if you can triforce!
 
 # Screenshots 
 
