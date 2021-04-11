@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(threeforce)
+project(triforce)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -17,9 +17,9 @@ include_directories(
 file(GLOB
         SOURCES src/*.cpp)
 
-add_executable(threeforce ${SOURCES})
+add_executable(triforce ${SOURCES})
 
-target_link_libraries(threeforce PRIVATE
+target_link_libraries(triforce PRIVATE
         X11::X11
         OpenGL::GL
         OpenGL::GLU
@@ -28,7 +28,7 @@ target_link_libraries(threeforce PRIVATE
         )
 
 #add_custom_command(
-#        TARGET threeforce POST_BUILD
+#        TARGET triforce POST_BUILD
 #        COMMAND ${CMAKE_COMMAND} -E copy
 #        ${CMAKE_SOURCE_DIR}/res/*
 #        ${CMAKE_CURRENT_BINARY_DIR})
@@ -41,4 +41,4 @@ ADD_CUSTOM_TARGET(
         VERBATIM
 )
 
-ADD_DEPENDENCIES (threeforce copy_shader_files)
+ADD_DEPENDENCIES (triforce copy_shader_files)

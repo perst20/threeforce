@@ -56,7 +56,7 @@ void init_glx_context(int x, int y, int width, int height) {
     );
 
     XMapWindow(display, window);
-    XStoreName(display, window, "threeforce");
+    XStoreName(display, window, "triforce");
 
     glxContext = glXCreateContext(display, visualInfo, NULL, GL_TRUE);
     glXMakeCurrent(display, window, glxContext);
